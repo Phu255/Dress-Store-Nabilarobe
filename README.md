@@ -1,24 +1,10 @@
-# README
+MOVE TO US ,RENEW CODES AND LEARN MORE ,I REMAKE THIS PROJECT AGAIN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Ubuntu-linux : 22.04.LTS
 
-Things you may want to cover:
+*Ruby : ruby 3.1.3p185 (2022-11-24 revision 1a6b16756e) [x86_64-linux]
 
-* Ruby version
+*Rails : 7.0.4
 
-* System dependencies
+*Sqlite3 : 3.37.2 2022-01-06 13:25:41 872ba256cbf61d9290b571c0e6d82a20c224ca3ad82971edc46b29818d5dalt1
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
