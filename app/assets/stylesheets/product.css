@@ -1,0 +1,21 @@
+.productindex {
+    color:rgb(184, 138, 230);
+}
+.productindex h1{
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 3px 3px ;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+
+}
+.productindex .image{
+    width:200px;
+    height:300px;
+}
+
+
+.productshow .image{
+    width:400px;
+    height:600px;
+}

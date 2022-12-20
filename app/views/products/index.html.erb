@@ -1,0 +1,17 @@
+<div class="productindex">
+
+<p style="color: green"><%= notice %></p>
+
+<h1 id="product">NABI LA ROBE </h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+    <%= render product %>
+      <%= link_to "Show this product", product %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New product", new_product_path %>
+
+</div>
