@@ -1,31 +1,31 @@
-<div id="<%= dom_id product %>">
+<div id="<%= dom_id product %>" class="eachproduct">
   <p class="avatar">
-    <%= image_tag(product.avatar,:class => 'image') %>
+  <%if product.avatar.attached? %>
+    <%= link_to image_tag(product.avatar,:class => 'image'),product %>
+  <%end%>
   </p>
 
-  <p>
-    <strong>Name:</strong>
+  <div class="price">
+    <%=number_to_currency((product.price/25000)-0.01) %>
+  </div>
+
+  <div class="name">
     <%= product.name %>
-  </p>
+  </div>
 
-  <p>
-    <strong>Size:</strong>
+  <div class="size">
     <%= product.size %>
-  </p>
+  </div>
 
-  <p>
-    <strong>Color1:</strong>
+  <div class="color">
     <%= product.color1 %>
-  </p>
+      <%if product.color2.present? %>/
+        <%= product.color2 %>
+      <%end%>
+  </div>
 
-  <p>
-    <strong>Color2:</strong>
-    <%= product.color2 %>
-  </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
+
 
 </div>
+

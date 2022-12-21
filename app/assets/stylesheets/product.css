@@ -1,5 +1,7 @@
-.productindex {
-    color:rgb(184, 138, 230);
+body.productindex {
+    color:rgb(129, 85, 173);
+    background-image: url('background.jpg') ;
+    background-size: cover;
 }
 .productindex h1{
     color:rgb(19, 16, 16);
@@ -7,15 +9,62 @@
     text-align: center;
     font-size: 40px;
     font-style: italic;
-
+}
+.productindex .allproduct{
+    border: dashed dodgerblue;
+    max-width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(290px));
+    font-size:15px;
+    padding-left: 220px;
+}
+.productindex .eachproduct{
+    border :solid black;
+    height:400px;
+    width :230px;   
+}
+.productindex .destroy{
+    color:red;
+    float:right;
+}
+.productindex .edit{
+    color:green;
 }
 .productindex .image{
-    width:200px;
+    width:230px;
     height:300px;
 }
+.productindex .name{
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 1px 1px ;
+    font-size: 20px;
+    padding-top:5px;
+}
+.productindex .price{
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 1px 1px ;
+    float:right;
+    font-size: 18px;
+    padding-top:6px;
+}
+.productindex .color ,.size{
+    padding-top:7px;
+}
 
-
+body.productshow {
+    color:rgb(129, 85, 173);
+    line-height: 25px;
+    background-image: url('5.webp') ;
+    background-size: cover;
+}
 .productshow .image{
-    width:400px;
+    width:450px;
     height:600px;
+}
+.productshow .name{
+    margin-top:5px;
+    margin-bottom:5px;
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 3px 2px ;
+   
 }

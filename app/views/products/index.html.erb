@@ -1,17 +1,51 @@
-<div class="productindex">
+<body class="productindex">
 
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-<h1 id="product">NABI LA ROBE </h1>
+  <h1> NABI LA ROBE </h1>
+ 
+  <div class="allproduct">
+    <% @products.each do |product| %>
+    
+      <% render product %>  <!-- #add = fot connect to _product.hmtl.erb ,not reccommend-->
 
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
-</div>
+      <div class="eachproduct">
+        <div>
+        <%= link_to "Destroy", product, method: :delete ,class:'destroy'%>
+        </div>
+        <div>
+        <%= link_to "Edit", edit_product_path(product) ,class:'edit'%> 
+      </div>
+        <div>
+          <% product.images.take(1).each do |image| %>
+            <%= link_to image_tag(image,class:'image'),product %>
+          <%end%>
+        </div>
+        <div class="price">
+          <%=number_to_currency((product.price/25000)-0.01) %>
+        </div>
+        <div class="name">
+          <%= product.name %>
+        </div>
+        <div class="size">
+          <%= product.size %>
+        </div>
+        <div class="color">
+          <%= product.color1 %>
+          <%if product.color2.present? %>/
+            <%= product.color2 %>
+          <%end%>
+        </div>
+        
+      </div>
+      
+    <% end %>
 
-<%= link_to "New product", new_product_path %>
+    
+    
+  </div>
 
-</div>
+
+  <%= link_to "New product", new_product_path %>
+
+</body>

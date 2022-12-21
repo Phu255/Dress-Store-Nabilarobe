@@ -1,11 +1,37 @@
 <body class="productshow">
-<p style="color: green"><%= notice %></p>
-<%= render @product %>
+  <p style="color: green"><%= notice %></p>
 
-<div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
+  <div class="eachproduct">
+    <% render @product %>  <!-- add = fot connect to _product.hmtl.erb ,not reccommend-->
 
-  <%= button_to "Destroy this product", @product, method: :delete %>
-</div>
+    <div>
+      <% @product.images.each do |image| %>
+        <%=image_tag image,class:'image' %>
+      <%end%>
+    </div>
+    <h1 class="name">
+      <%= @product.name %>
+    </h1>
+    <div>
+      <strong>Price : </strong>
+      <%= number_to_currency((@product.price/25000)-0.01) %>
+    </div>
+    <div>
+      <strong>Size : </strong>
+      <%= @product.size %>
+    </div>
+    <div>
+      <strong>Color : </strong>
+      <%= @product.color1 %>
+      <%if @product.color2.present? %>
+        / <%= @product.color2 %>
+      <%end%>
+    </div>
+
+  <div>
+    <%= link_to "Edit this product", edit_product_path(@product) %> |
+    <%= link_to "Back to products", products_path %>
+    <%= button_to "Destroy this product", @product, method: :delete %>
+  </div>
+
 </body>
