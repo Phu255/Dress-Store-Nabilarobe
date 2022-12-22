@@ -1,37 +1,64 @@
 <body class="productshow">
   <p style="color: green"><%= notice %></p>
 
-  <div class="eachproduct">
-    <% render @product %>  <!-- add = fot connect to _product.hmtl.erb ,not reccommend-->
+  <!-- <% render @product %>  add = for connect to _product.hmtl.erb ,not reccommend-->
+  <div class="normal">
+    <div class="show1">
+      <div class="flex" id="aaa" >
+        <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+          <div id="carousel_<%= product.id=1 %>" class="carousel slide" data-bs-ride="carousel"  >
+            <div class="carousel-indicators">         <!-- Indicators/dots -->
+              <% @product.images1.each_with_index do |image, index| %>
+                <button data-bs-target="#carousel_<%= product.id=1 %>"  data-bs-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %> nut ">
+                  <%= image_tag image ,class:'image-indicators d-block ' %><br>
+                </button>
+              <%end%>
+            </div>
 
-    <div>
-      <% @product.images.each do |image| %>
-        <%=image_tag image,class:'image' %>
-      <%end%>
-    </div>
-    <h1 class="name">
-      <%= @product.name %>
-    </h1>
-    <div>
-      <strong>Price : </strong>
-      <%= number_to_currency((@product.price/25000)-0.01) %>
-    </div>
-    <div>
-      <strong>Size : </strong>
-      <%= @product.size %>
-    </div>
-    <div>
-      <strong>Color : </strong>
-      <%= @product.color1 %>
-      <%if @product.color2.present? %>
-        / <%= @product.color2 %>
-      <%end%>
+            <div class="carousel-inner">          <!-- carousel -->
+              <% @product.images1.each_with_index do |image, index| %>
+                <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+                  <%= image_tag image, class: 'image' %><br>
+                </div>
+              <%end%>
+            </div>
+                                      <!-- button -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_<%= product.id=1 %>" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= product.id=1 %>" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <% end %>
+      </div>
     </div>
 
-  <div>
-    <%= link_to "Edit this product", edit_product_path(@product) %> |
-    <%= link_to "Back to products", products_path %>
-    <%= button_to "Destroy this product", @product, method: :delete %>
+    <div class="show2">
+      <h1 class="name">
+        <%= @product.name %>
+      </h1>
+      <div>
+        <strong>Price : </strong>
+        <%= number_to_currency((@product.price/25000)-0.01) %>
+      </div>
+      <div>
+        <strong>Size : </strong>
+        <%= @product.size %>
+      </div>
+      <div>
+        <strong>Color : </strong>
+        <%= @product.color1 %>
+        <%if @product.color2.present? %>
+          / <%= @product.color2 %>
+        <%end%>
+      </div>
+    </div>
   </div>
-
 </body>
+
+
+
+

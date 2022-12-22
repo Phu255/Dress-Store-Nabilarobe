@@ -2,12 +2,14 @@ body.productindex {
     color:rgb(129, 85, 173);
     background-image: url('background.jpg') ;
     background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .productindex h1{
     color:rgb(19, 16, 16);
     text-shadow:rgb(184, 138, 230) 3px 3px ;
     text-align: center;
-    font-size: 40px;
+
+    font-family:"Times New Roman", Times, serif;
     font-style: italic;
 }
 .productindex .allproduct{
@@ -20,12 +22,8 @@ body.productindex {
 }
 .productindex .eachproduct{
     border :solid black;
-    height:400px;
-    width :230px;   
-}
-.productindex .destroy{
-    color:red;
-    float:right;
+    height:430px;
+    width :235px;   
 }
 .productindex .edit{
     color:green;
@@ -56,15 +54,60 @@ body.productshow {
     line-height: 25px;
     background-image: url('5.webp') ;
     background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.productshow .normal:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;
+}
+.flex {/* phai co de padding-left :15% = 15% cua trang ,khong phai 15% cua homepage1*/
+    text-align:center; /* de hinh luon o giua ,khong bi nhay */
+    padding-left: 10%;
+    padding-right: 10%;
+    }
+.productshow .carousel-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    padding-top:20px;
+    margin-left:10px;
+}
+.productshow .image-indicators{
+    width:210%;
+    height:80px;
+}
+.productshow .image-indicators:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 1px solid black;
 }
 .productshow .image{
-    width:450px;
-    height:600px;
+    margin-top:15px;
+    margin-bottom:30px;
+    padding-bottom:10px;
+    width:600px;
+    height:750px;
+    max-width:100%;
 }
+.productshow .carousel-control-prev{
+    width:150px;
+  }
+.product .carousel-control-next{
+    width:150px;
+  }
 .productshow .name{
     margin-top:5px;
     margin-bottom:5px;
     color:rgb(19, 16, 16);
     text-shadow:rgb(184, 138, 230) 3px 2px ;
-   
+}
+.productshow .show1{
+    width:50%;
+    float:left;
+    padding-bottom: 50px;;
+    padding-left:100px;;
+}
+.productshow .show2{
+    width:50%;
+    float:left;
+  
 }

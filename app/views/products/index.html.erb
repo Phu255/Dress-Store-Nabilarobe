@@ -2,7 +2,7 @@
 
   <p style="color: green"><%= notice %></p>
 
-  <h1> NABI LA ROBE </h1>
+  <h1> All Nabi Dresses </h1>
  
   <div class="allproduct">
     <% @products.each do |product| %>
@@ -11,13 +11,10 @@
 
       <div class="eachproduct">
         <div>
-        <%= link_to "Destroy", product, method: :delete ,class:'destroy'%>
+        <%= link_to "Edit", edit_product_path(product) ,class:'edit'%> 
         </div>
         <div>
-        <%= link_to "Edit", edit_product_path(product) ,class:'edit'%> 
-      </div>
-        <div>
-          <% product.images.take(1).each do |image| %>
+          <% product.images1.take(1).each do |image| %>
             <%= link_to image_tag(image,class:'image'),product %>
           <%end%>
         </div>
@@ -36,16 +33,7 @@
             <%= product.color2 %>
           <%end%>
         </div>
-        
       </div>
-      
     <% end %>
-
-    
-    
   </div>
-
-
-  <%= link_to "New product", new_product_path %>
-
 </body>

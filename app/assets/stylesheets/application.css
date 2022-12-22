@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+header .rounded-pill{
+    width:50px;
+    height:50px;
+    margin-left:20px;
+}
+
+header .nav-link{
+    color:rgb(184, 138, 230);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header .nav-center{
+    padding-left:300px;
+    padding-right:300px;
+}
+
+footer {
+    background-color: black;
+    padding-bottom:10px;
+    margin-top:10px;
+}
+footer .editfooter{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    background-color: black;
+
+  }
+footer .grid-item {
+    margin:10px;
+    margin-left:30px;
+    color:rgb(184, 138, 230);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+footer .item2 {
+    margin-left:30px;
+    padding-top :10px;
+    color:rgb(184, 138, 230);
+    font-family: "Times New Roman", Times, serif;
+}
