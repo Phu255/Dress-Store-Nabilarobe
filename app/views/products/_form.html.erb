@@ -1,52 +1,95 @@
-<%= form_with(model: product) do |form| %>
-  <% if product.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+<body class="productform">
+  
+  <%= form_with(model: product) do |form| %>
+    <% if product.errors.any? %>
+      <div style="color:red">
+        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-        <% product.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% product.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div>
+    <%= form.label :name ,style: "display: block"%>
+    <%= form.text_field :name %>
+  </div><br>
+  
+  <div>
+    <%= form.label :classify ,style: "display: block"%>
+    <%= form.select :classify, ['Greatest', 'Latest', 'None'], selected: 'Latest' ,class:"input2" %>
+  </div><br>
+  
+  <div>
+    <%= form.label :avatar ,style: "display: block" %>
+    <%= form.file_field :avatar %>
+  </div>
+  <% if @product.avatar.attached? %>
+    <%= image_tag @product.avatar ,class:"image" %><br>
+  <% end %><br>
+  <div>
+    <%= form.label :description ,style: "display: block"%>
+    <%= form.text_area :description, class:"input1" %>
+  </div>
+  <div class="form1">
+    <div>
+      <%= form.label :color1, style: "display: block" %>
+      <%= form.text_field :color1 %>
+    </div><br>
+    
+    <div>
+      <%= form.label :price1, style: "display: block" %>
+      <%= form.text_field :price1 %>
+    </div><br>
+    
+    <div>
+      <%= form.label :size1, style: "display: block" %>
+      <%= form.text_field :size1 ,class:"input3"%>
+    </div><br>
+
+    <div>
+      <%= form.label :images1 %>
+      <%= form.file_field :images1, multiple: true ,style: "display: block"  %>
+      <% @product.images1.each do |image| %>
+        <%= image_tag image ,class:"image" %>
+      <%end%>
+    </div><br>
+
+    <div>
+    <%= form.submit %>
     </div>
+  </div>
+
+  <div class="form2">
+
+    <div>
+      <%= form.label :color2, style: "display: block" %>
+      <%= form.text_field :color2 %><br>
+    </div><br>
+    
+    <div>
+      <%= form.label :price2, style: "display: block" %>
+      <%= form.text_field :price2 %>
+    </div><br>
+    
+    <div>
+      <%= form.label :size2, style: "display: block" %>
+      <%= form.text_field :size2 ,class:"input3"%>
+    </div><br>  
+
+    <div>
+    <%= form.label :images1 %>
+    <%= form.file_field :images2, multiple: true ,style: "display: block"  %>
+    <% @product.images2.each do |image| %>
+      <%= image_tag image ,class:"image" %>
+    <%end%>
+  </div>
+  
+  </div><br>
+
   <% end %>
 
-  <div>
-  <% form.label :avatar, style: "display: block" %>
-  <% form.file_field :avatar %>
-  </div>
-  
-  <div>
-  <%= form.label :images1 %>
-  <%= form.file_field :images1, multiple: true ,style: "display: block"  %>
-  </div>
-  
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :size, style: "display: block" %>
-    <%= form.text_field :size %>
-  </div>
-
-  <div>
-    <%= form.label :color1, style: "display: block" %>
-    <%= form.text_field :color1 %>
-  </div>
-
-  <div>
-    <%= form.label :color2, style: "display: block" %>
-    <%= form.text_field :color2 %>
-  </div>
-
-  <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</body>

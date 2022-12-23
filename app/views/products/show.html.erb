@@ -41,12 +41,16 @@
         <%= @product.name %>
       </h1>
       <div>
+        <strong>Classify : </strong>
+        <%= @product.classify %>
+      </div>
+      <div>
         <strong>Price : </strong>
-        <%= number_to_currency((@product.price/25000)-0.01) %>
+        <%= number_to_currency((@product.price1/25000)-0.01) %>
       </div>
       <div>
         <strong>Size : </strong>
-        <%= @product.size %>
+        <%= @product.size1 %>
       </div>
       <div>
         <strong>Color : </strong>
@@ -54,6 +58,10 @@
         <%if @product.color2.present? %>
           / <%= @product.color2 %>
         <%end%>
+      </div>
+      <div>
+        <strong>Description : </strong>
+        <%= @product.description %>
       </div>
     </div>
   </div>

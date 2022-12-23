@@ -26,7 +26,7 @@ body.productindex {
     width :235px;   
 }
 .productindex .edit{
-    color:green;
+    color:rgb(79, 7, 173);
 }
 .productindex .image{
     width:230px;
@@ -48,6 +48,7 @@ body.productindex {
 .productindex .color ,.size{
     padding-top:7px;
 }
+
 
 body.productshow {
     color:rgb(129, 85, 173);
@@ -107,7 +108,62 @@ body.productshow {
     padding-left:100px;;
 }
 .productshow .show2{
+    padding-top:5%;
     width:50%;
     float:left;
-  
+    line-height:30px;
+}
+
+
+body.productform{
+    background-image: url('background.jpg') ;
+    background-size: cover;
+    color:rgb(87, 27, 148);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.productform #form{
+    padding-left:5%;
+    line-height: 20px;
+    padding-top :15px;
+    padding-bottom: 15px;
+}
+.productform #form:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;
+}
+.productform h1{
+    color:cyan;
+}
+.productform .image{
+    min-height:50px;
+    width:100px;
+}
+.productform .form1{
+    padding-top:20px;
+    width :50%;
+    float:left;
+    padding-bottom:30px;
+}
+.productform .form2{
+    padding-top:20px;
+    width :50%;
+    float:left;
+    padding-bottom:30px;
+}
+.productform .input1{
+    height:100px;
+    width:400px;
+}
+.productform .input2{
+    height:15px;
+}
+.productform .input3{
+    width:400px;
+}
+
+
+.edit{
+    width :100%;
+    float:left;
 }

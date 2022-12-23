@@ -6,7 +6,6 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.string :color1
       t.string :color2
       t.decimal :price
-
       t.timestamps
     end
   end

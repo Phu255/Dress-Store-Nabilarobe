@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_20_020826) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_23_050230) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -41,12 +41,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_20_020826) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "size"
     t.string "color1"
     t.string "color2"
-    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "size1"
+    t.string "size2"
+    t.decimal "price1"
+    t.decimal "price2"
+    t.string "classify"
+    t.text "description"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

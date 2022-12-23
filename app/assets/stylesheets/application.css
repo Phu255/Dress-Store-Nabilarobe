@@ -34,12 +34,10 @@ footer {
     margin-top:10px;
 }
 footer .editfooter{
-
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     background-color: black;
-
-  }
+}
 footer .grid-item {
     margin:10px;
     margin-left:30px;
