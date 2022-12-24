@@ -1,9 +1,10 @@
 <body class="productindex">
-
   <p style="color: green"><%= notice %></p>
-
+  <div class="normal">
   <h1> All Nabi Dresses </h1>
- 
+  <div class="filter">
+  <%= render "filter" %>
+  </div>
   <div class="allproduct">
     <% @products.each do |product| %>
     
@@ -20,8 +21,8 @@
 
         <div class="price">
           <%= number_to_currency (product.price1/25000)-0.01  %>
-          <%if product.price2.present? %>-
-            <%= product.price2 %>
+          <%if product.price2.present? %>~
+            <%= number_to_currency (product.price2/25000)-0.01  %>
           <%end%>
         </div>
 
@@ -31,6 +32,9 @@
 
         <div class="size">
           <%= product.size1 %>
+          <%if product.size2.present? %>-
+          <%= product.size2 %>
+          <%end%>
         </div>
         
         <div class="color">
@@ -41,5 +45,6 @@
         </div>
       </div>
     <% end %>
+  </div>
   </div>
 </body>

@@ -1,8 +1,12 @@
 body.productindex {
-    color:rgb(129, 85, 173);
     background-image: url('background.jpg') ;
     background-size: cover;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.productindex .normal:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;
 }
 .productindex h1{
     color:rgb(19, 16, 16);
@@ -13,15 +17,15 @@ body.productindex {
     font-style: italic;
 }
 .productindex .allproduct{
-    border: dashed dodgerblue;
-    max-width:100%;
+    min-width:80%; 
+    max-width:90%;  
     display: grid;
-    grid-template-columns: repeat(auto-fill, min(290px));
+    grid-template-columns: repeat(auto-fill, min(300px));
     font-size:15px;
-    padding-left: 220px;
+    float:right;
+    color:rgb(89, 35, 143);
 }
 .productindex .eachproduct{
-    border :solid black;
     height:430px;
     width :235px;   
 }
@@ -31,6 +35,9 @@ body.productindex {
 .productindex .image{
     width:230px;
     height:300px;
+}
+.productindex .image:hover{
+opacity:0.7;
 }
 .productindex .name{
     color:rgb(19, 16, 16);
@@ -43,10 +50,44 @@ body.productindex {
     text-shadow:rgb(184, 138, 230) 1px 1px ;
     float:right;
     font-size: 18px;
-    padding-top:6px;
+    padding-top:8px;
 }
 .productindex .color ,.size{
     padding-top:7px;
+}
+.productindex .filter{
+    width:20%;
+    float:left;
+    padding-left :2%;
+}
+
+.filter h2{
+    color:black;
+    text-shadow:rgb(184, 138, 230) 2px 2px ;
+}
+.filter .col1{
+    color:black;
+    text-shadow:rgb(184, 138, 230) 1px 1px ;
+    line-height: 40px;
+    font-size:120%;
+    text-decoration: inherit;
+}
+.filter .col1:hover{
+    opacity:0.5;
+}
+.filter .col2{
+    color: black;
+    padding-left :40px;
+}
+.filter .col2:hover{
+    opacity:0.5;
+}
+.filter .colorround{
+    height:30px;
+    width:50px;
+}
+.filter .colorround:hover{
+    opacity:0.5;
 }
 
 
@@ -167,3 +208,4 @@ body.productform{
     width :100%;
     float:left;
 }
+
