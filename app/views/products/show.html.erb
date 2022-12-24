@@ -2,6 +2,7 @@
   <p style="color: green"><%= notice %></p>
 
   <!-- <% render @product %>  add = for connect to _product.hmtl.erb ,not reccommend-->
+
   <div class="normal">
     <div class="show1">
       <div class="flex" id="aaa" >
@@ -34,39 +35,104 @@
           </div>
         <% end %>
       </div>
+
+
+      <div class="flex" id="bbb" style="display:none">
+        <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+          <div id="carousel_<%= product.id=2 %>" class="carousel slide" data-bs-ride="carousel"  >
+            <div class="carousel-indicators">         <!-- Indicators/dots -->
+              <% @product.images2.each_with_index do |image, index| %>
+                <button data-bs-target="#carousel_<%= product.id=2 %>"  data-bs-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %> nut ">
+                  <%= image_tag image ,class:'image-indicators d-block ' %><br>
+                </button>
+              <%end%>
+            </div>
+
+            <div class="carousel-inner">          <!-- carousel -->
+              <% @product.images2.each_with_index do |image, index| %>
+                <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+                  <%= image_tag image, class: 'image' %><br>
+                </div>
+              <%end%>
+            </div>
+                                      <!-- button -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_<%= product.id=2 %>" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= product.id=2 %>" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <% end %>
+      </div>
+
     </div>
 
     <div class="show2">
       <h1 class="name">
         <%= @product.name %>
       </h1>
+
       <div>
         <strong>Classify : </strong>
         <%= @product.classify %>
       </div>
-      <div>
+
+      <div id="price1">
         <strong>Price : </strong>
         <%= number_to_currency((@product.price1/25000)-0.01) %>
       </div>
+      <% if @product.price2.present? %>
+        <div id="price2" style="display:none">
+        <strong>Price : </strong>
+        <%= number_to_currency @product.price2/25000-0.01 %>
+        </div>
+      <%end%>
+
       <div>
         <strong>Size : </strong>
         <%= @product.size1 %>
       </div>
-      <div>
-        <strong>Color : </strong>
-        <%= @product.color1 %>
-        <%if @product.color2.present? %>
-          / <%= @product.color2 %>
-        <%end%>
-      </div>
+
       <div>
         <strong>Description : </strong>
         <%= @product.description %>
       </div>
+
+      <% if @product.color2.present? %>
+        <strong>Color : </strong>
+        <br>
+        <a onclick="x()">
+          <% @product.images1.take(1).each do |image| %>
+            <%= image_tag image ,class:"image-color"%>
+          <%end%>
+        </a>
+        <a onclick="y()">
+          <% @product.images2.take(1).each do |image| %>
+            <%= image_tag image ,class:"image-color" %>
+          <%end%>
+        </a>
+      <%end%>
+
     </div>
   </div>
 </body>
 
-
+<script>
+ function x() {
+  document.getElementById("aaa").style.display = "block";
+  document.getElementById("bbb").style.display = "none";
+  document.getElementById("price1").style.display = "inline";
+  document.getElementById("price2").style.display = "none";
+}
+function y() {
+  document.getElementById("aaa").style.display = "none";
+  document.getElementById("bbb").style.display = "block";
+  document.getElementById("price1").style.display = "none";
+  document.getElementById("price2").style.display = "inline";
+}
+</script>
 
 

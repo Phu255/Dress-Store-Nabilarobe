@@ -37,7 +37,9 @@ body.productindex {
     height:300px;
 }
 .productindex .image:hover{
-opacity:0.7;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    opacity:0.8;
+    transform: translateY(5px);
 }
 .productindex .name{
     color:rgb(19, 16, 16);
@@ -132,15 +134,9 @@ body.productshow {
 }
 .productshow .carousel-control-prev{
     width:150px;
-  }
+}
 .product .carousel-control-next{
     width:150px;
-  }
-.productshow .name{
-    margin-top:5px;
-    margin-bottom:5px;
-    color:rgb(19, 16, 16);
-    text-shadow:rgb(184, 138, 230) 3px 2px ;
 }
 .productshow .show1{
     width:50%;
@@ -153,6 +149,22 @@ body.productshow {
     width:50%;
     float:left;
     line-height:30px;
+}
+.productshow .name{
+    margin-top:5px;
+    margin-bottom:5px;
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 3px 2px ;
+}
+.productshow .image-color{
+    width:85px;
+    height:110px;
+    margin-right:10px;
+}
+.productshow .image-color:hover{
+    opacity:0.7;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 1px solid black;
 }
 
 
