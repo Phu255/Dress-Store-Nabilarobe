@@ -91,10 +91,16 @@
         </div>
       <%end%>
 
-      <div>
+      <div id="size1">
         <strong>Size : </strong>
         <%= @product.size1 %>
       </div>
+        <% if @product.size2.present? %>
+        <div id="size2" style="display:none">
+        <strong>Size : </strong>
+        <%= @product.size2 %>
+        </div>
+      <%end%>
 
       <div>
         <strong>Description : </strong>
@@ -126,12 +132,16 @@
   document.getElementById("bbb").style.display = "none";
   document.getElementById("price1").style.display = "inline";
   document.getElementById("price2").style.display = "none";
+  document.getElementById("size1").style.display = "block";
+  document.getElementById("size2").style.display = "none";
 }
 function y() {
   document.getElementById("aaa").style.display = "none";
   document.getElementById("bbb").style.display = "block";
   document.getElementById("price1").style.display = "none";
   document.getElementById("price2").style.display = "inline";
+  document.getElementById("size1").style.display = "none";
+  document.getElementById("size2").style.display = "block";
 }
 </script>
 
