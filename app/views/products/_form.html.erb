@@ -20,10 +20,10 @@
   
   <div>
     <%= form.label :classify ,style: "display: block"%>
-    <%= form.select :classify, ['Greatest', 'Latest', 'None'], selected: 'Latest' ,class:"input2" %>
+    <%= form.select :classify, ['Latest', 'Greatest', 'None'] ,class:"input2" %>
   </div><br>
-  
-  <div>
+    
+ <div>
     <%= form.label :avatar ,style: "display: block" %>
     <%= form.file_field :avatar %>
   </div>
