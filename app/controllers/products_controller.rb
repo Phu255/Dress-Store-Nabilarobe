@@ -9,7 +9,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
-    @products = Product.all
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
   end
 
   # GET /products/new

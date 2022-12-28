@@ -21,11 +21,43 @@ header .rounded-pill{
 header .nav-link{
     color:rgb(184, 138, 230);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   margin-left:10px;
 }
-header .nav-center{
-    padding-left:300px;
-    padding-right:300px;
+header .nav-link:hover{
+    color:white;
 }
+header .dropdown:hover{
+    color:white;
+}
+header .btn{
+    padding-top:7px;
+    color:aqua;
+}
+header .rounded-pill{
+    width:50px;
+    height:50px;
+    margin-bottom:0px;
+    margin-top:0px;
+    margin-left:20px;
+}
+header .form-control{
+    background-color:white;
+    width:330px;
+    height:25px;
+    margin-right :20px;
+}
+header .search {
+    width:45px;
+    height:45px;
+    margin-right:20px;
+    float: right;
+}
+header .search2 {
+   margin-top:11px;
+  
+}
+
+
 
 footer {
     background-color: black;

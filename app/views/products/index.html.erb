@@ -1,5 +1,7 @@
+<%= render "layouts/header" %>
 <body class="productindex">
   <p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= alert %></p>
   <div class="normal">
   <h1><%= link_to "All Nabi Dresses", products_path, class:"nav-link" %></h1>
   <div class="filter">
@@ -11,9 +13,11 @@
       <% render product %>  <!-- #add = fot connect to _product.hmtl.erb ,not reccommend-->
 
       <div class="eachproduct">
-        <div>
-        <%= link_to "Edit", edit_product_path(product) ,class:'edit'%> 
-        </div>
+        <% if admin_signed_in? %>      
+          <div>
+            <%= link_to "Edit", edit_product_path(product) ,class:'edit'%> 
+          </div>
+        <%end%>
 
         <div>
           <%= link_to image_tag(product.avatar,class:'image'),product %>
@@ -48,3 +52,4 @@
   </div>
   </div>
 </body>
+<%= render "layouts/footer" %>
