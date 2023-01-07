@@ -50,7 +50,7 @@ Upload app to Heroku (Ubuntu ,NodeJs problem but still can't fix )
 Fixing Nodejs error buy using $ heroku buildpacks:add heroku/nodejs /$ heroku buildpacks:add heroku/ruby => the error change to " Error during git push/deployment, The same version of this code has already been built "
 Keep fixing it by make a new folder with a different name, pasted all files, deleted the old, and rename the new to the old one. by doing this you will have a git free directory then you can use the git init method to simply make a new repo " => the error change to "Error" ,still can't push it
 
-Learn very clearly about Associations (Rails)
+Learn very clearly about Associations (Rails)   
 
 Online payment
 
@@ -65,4 +65,6 @@ Create a cart for use to buy product
 Save Images source from the last update in the edit path 
 
 Item sort by Date Creating in the product#index
+
+Create a Out of stock button to push products down of the item list
 

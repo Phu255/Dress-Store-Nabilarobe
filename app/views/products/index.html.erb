@@ -10,7 +10,7 @@
   <div class="allproduct">
     <% @products.each do |product| %>
     
-      <% render product %>  <!-- #add = fot connect to _product.hmtl.erb ,not reccommend-->
+      <% render product %>  <!-- #add = for connect to _product.hmtl.erb ,not reccommend-->
 
       <div class="eachproduct">
         <% if admin_signed_in? %>      
@@ -47,6 +47,7 @@
             <%= product.color2 %>
           <%end%>
         </div>
+
       </div>
     <% end %>
   </div>

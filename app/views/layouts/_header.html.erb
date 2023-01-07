@@ -24,7 +24,7 @@
         <li class="nav-item" >
           <%= link_to 'New Product', new_product_path , class:"nav-link"  %>
         </li>
-        
+
         <%= button_to "Sign Out",  destroy_admin_session_path,:method => :delete, class:"btn btn-default nav-link"  %>
                           <!-- khong duoc de nav-item ,khong bam duoc ,phai de button_to -->
       <% else %>
