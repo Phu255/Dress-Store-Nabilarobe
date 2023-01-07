@@ -1,0 +1,109 @@
+<!-- (button id="find_submit") = f.submit -->
+
+
+<h2>Sort</h2>
+  <li ><%= sort_link(@q, :name ,"Sort by Name",class:"col1") %></li>
+  <li ><%= sort_link(@q, :price1 ,"Sort by Price",class:"col1")%></li>
+<br>
+
+<h2> Filter </h2>
+  <li><a class="col1" data-bs-toggle="collapse" href="#collapse1" >Classify</a></li>
+    <div class="collapse show" id="collapse1">
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" class="btn btn-default" ><span class="col2">Latest</span></button>
+          <%= find.hidden_field :classify_cont, value: "Latest" %>
+      <%end%>
+
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" class="btn btn-default" ><span class="col2">Greatest</span></button>
+          <%= find.hidden_field :classify_cont, value: "Greatest" %>
+      <%end%>
+    </div>
+
+  <li><a class="col1" data-bs-toggle="collapse" href="#collapse2" >Size</a></li>
+    <div class="collapse show" id="collapse2">
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" class="btn btn-default" ><span class="col2">Freesize</span></button>
+          <%= find.hidden_field :size1_or_size2_cont, value: "Freesize" %>
+      <%end%>
+
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" class="btn btn-default" ><span class="col2">S</span></button>
+          <%= find.hidden_field :size1_or_size2_start, value: "S" %>
+      <%end%>
+
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" class="btn btn-default" ><span class="col2">M</span></button>
+          <%= find.hidden_field :size1_or_size2_cont, value: "M" %>
+      <%end%>
+    </div>
+
+  <li><a class="col1" data-bs-toggle="collapse" href="#collapse3" >Color</a></li>
+    <div class="collapse show" id="collapse3">
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "white.png"  ,class:"colorround rounded-pill" %> White
+      <%= find.hidden_field :color1_or_color2_cont, value: "White" %> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "blackandwhite.png"  ,class:"colorround rounded-pill" %> Black and White
+      <%= find.hidden_field :color1_or_color2_cont, value: "Black and White" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "black.jpg"  ,class:"colorround rounded-pill" %> Dark
+      <%= find.hidden_field :color1_or_color2_cont, value: "Black" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "brown.png"  ,class:"colorround rounded-pill" %> Brown
+      <%= find.hidden_field :color1_or_color2_cont, value: "Brown" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "lightbrown.png"  ,class:"colorround rounded-pill" %> Light Brown
+      <%= find.hidden_field :color1_or_color2_cont, value: "Light Brown" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "pink.png"  ,class:"colorround rounded-pill" %> Pink
+      <%= find.hidden_field :color1_or_color2_cont, value: "Pink" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "deeppink.png"  ,class:"colorround rounded-pill" %> Deep Pink
+      <%= find.hidden_field :color1_or_color2_cont, value: "Deep Pink" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "champagepink.jpeg"  ,class:"colorround rounded-pill" %> Champage Pink
+      <%= find.hidden_field :color1_or_color2_cont, value: "Champage Pink" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "red.jpeg"  ,class:"colorround rounded-pill" %> Red
+      <%= find.hidden_field :color1_or_color2_cont, value: "Red" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "violet.png"  ,class:"colorround rounded-pill" %> Violet
+      <%= find.hidden_field :color1_or_color2_cont, value: "Violet" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "cream.png"  ,class:"colorround rounded-pill" %> Cream
+      <%= find.hidden_field :color1_or_color2_cont, value: "Cream" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "blue.png"  ,class:"colorround rounded-pill" %> Cyan
+      <%= find.hidden_field :color1_or_color2_cont, value: "Cyan" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "darkblue.png"  ,class:"colorround rounded-pill" %> Dark Blue
+      <%= find.hidden_field :color1_or_color2_cont, value: "Dark Blue" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "chocolate.jpg"  ,class:"colorround rounded-pill" %> Chocolate
+      <%= find.hidden_field :color1_or_color2_cont, value: "Chocolate" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "green.png"  ,class:"colorround rounded-pill" %> Green
+      <%= find.hidden_field :color1_or_color2_cont, value: "Green" ,class:"form-control",id:"find"%> 
+      <% end %>
+      <%= search_form_for @q do |find| %>
+        <input id="find_submit" type="image" <%= image_tag "darkgreen.png"  ,class:"colorround rounded-pill" %> Dark Green
+      <%= find.hidden_field :color1_or_color2_cont, value: "Dark Green" ,class:"form-control",id:"find"%> 
+      <% end %>
+    </div>
+
+

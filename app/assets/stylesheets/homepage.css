@@ -1,0 +1,84 @@
+body.homepageindex {
+    background-image: url('background.jpg') ;
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(184, 138, 230);
+}
+.homepageindex .normal:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;
+}
+.homepageindex h1{
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 3px 3px ;
+    text-align: center;
+    font-family:"Times New Roman", Times, serif;
+    font-style: italic;
+}
+.homepageindex video { 
+    margin-left :10%;
+    margin-right :10%;;
+    width: 80%;
+    max-height: 800px;;
+}
+.homepageindex .flex {/* phai co de padding-left :15% = 15% cua trang ,khong phai 15% cua homepage1*/
+    text-align:center; /* de hinh luon o giua ,khong bi nhay */
+    padding-left: 15%;
+    padding-right: 15%;
+    }
+.homepageindex .title{
+    color:rgb(19, 16, 16);
+    text-shadow:rgb(184, 138, 230) 2px 2px ;
+    font-size :30px;
+}
+.homepageindex .image {
+    width:680px;
+    height:810px;
+  max-width:100%;
+}
+.homepageindex h3,h4{
+    text-shadow: 1px 1px rgb(184, 138, 230);
+    color:black;;
+}
+.homepageindex .homepage1{
+    width:50%;
+    float:left;
+}
+.homepageindex .homepage2{
+    width:50%;
+    float:right;
+}
+.homepageindex  .carousel-control-prev{
+    width:150px;
+}
+.homepageindex .carousel-control-next{
+    width:150px;
+}
+
+body.homepageform{
+    background-image: url('background.jpg') ;
+    background-size: cover;
+    color:rgb(87, 27, 148);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.homepageform #form{
+    padding-left:5%;
+    line-height: 20px;
+    padding-top :15px;
+    padding-bottom: 15px;
+}
+.homepageform #form:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;
+}
+.homepageform h1{
+    color:cyan;
+}
+.homepageform video{
+    padding-right:10%;
+    padding-left:5%;
+    width: 100%;
+    max-height: 800px;;
+}
