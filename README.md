@@ -68,3 +68,5 @@ Item sort by Date Creating in the product#index
 
 Create a Out of stock button to push products down of the item list
 
+Save data of pictures and videos from not adding an old ones when editting
+
